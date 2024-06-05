@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_exercise"
+        android:title="Exercises"
+        android:icon="@drawable/baseline_space_dashboard_24"
+        />
+    <item
+        android:id="@+id/bottom_rou"
+        android:title="Routine"
+        android:icon="@drawable/baseline_space_dashboard_24"
+        />
+    <item
+        android:id="@+id/bottom_rem"
+        android:title="Reminder"
+        android:icon="@drawable/baseline_notifications_24"
+        />
+    <item
+        android:id="@+id/bottom_pro"
+        android:title="Me"
+        android:icon="@drawable/baseline_person_24"/>
+</menu>
