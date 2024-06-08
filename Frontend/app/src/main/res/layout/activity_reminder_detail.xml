@@ -65,7 +65,6 @@
                     android:id="@+id/remName"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/jumper_light"
                     android:text="hi"
                     android:textColor="@color/black"
                     android:textSize="15sp" />

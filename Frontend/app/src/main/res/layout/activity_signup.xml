@@ -33,11 +33,18 @@
             app:layout_constraintTop_toBottomOf="@+id/register_now">
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Username"
                 android:drawablePadding="10dp"
@@ -45,11 +52,18 @@
                 tools:layout_editor_absoluteX="172dp"
                 tools:layout_editor_absoluteY="383dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Email"
                 android:drawablePadding="10dp"
@@ -57,11 +71,18 @@
                 tools:layout_editor_absoluteX="172dp"
                 tools:layout_editor_absoluteY="383dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Password"
                 android:drawablePadding="10dp"

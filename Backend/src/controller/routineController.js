@@ -42,11 +42,14 @@ const deleteUserRoutine = async (req,res) => {
     try {
         const {rouid} = req.params;
 
-        const query = 'DELETE FROM "Routine" WHERE rouid = $1';
+        const queryVariation = 'DELETE FROM "Variation" WHERE rouid = $1';
+        const queryRoutine = 'DELETE FROM "Routine" WHERE rouid = $1';
         const values = [rouid];
-        const results = await pool.query(query, values);
+        await pool.query(queryVariation, values);
+        const resultsRou = await pool.query(queryRoutine, values);
+        
 
-    if (results.rowCount === 0) {
+    if (resultsRou.rowCount === 0) {
             res.status(404).json({message: 'Routine not found'});
         } else {
             res.json({message: 'Routine deleted successfully'});

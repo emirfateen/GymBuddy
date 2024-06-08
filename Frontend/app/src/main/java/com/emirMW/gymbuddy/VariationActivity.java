@@ -193,6 +193,5 @@ public class VariationActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
-
     }
 }
