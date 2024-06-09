@@ -64,24 +64,6 @@ const loginUser = async (req, res) => {
   }
 };
 
-const getUserById = async (req, res) => {
-    try {
-      const {userid} = req.params;
-
-      const query = 'SELECT username,email FROM "User" WHERE userid = $1';
-      const values = [userid];
-      const results = await pool.query(query, values);
-  
-      if (results.rows.length === 0) {
-        res.status(404).json({message: 'User not found'});
-      } else {
-        res.json(results.rows);
-      }
-    } catch (error) {
-      res.status(500).json({error: error.message});
-    }
-};
-
 const logOut = async (req, res) => {
   try {
     await new Promise((resolve, reject) => {
@@ -102,7 +84,6 @@ const logOut = async (req, res) => {
 
 
 module.exports = {
-    getUserById,
     signupUser,
     loginUser,
     logOut

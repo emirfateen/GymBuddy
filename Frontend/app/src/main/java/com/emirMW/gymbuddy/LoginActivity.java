@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         String userPassword = password.getText().toString();
 
         if (userEmail.isEmpty() || userPassword.isEmpty()) {
-            Toast.makeText(mContext, "Field cannot be empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Please fill all the fields", Toast.LENGTH_SHORT).show();
             return;
         }
 

@@ -19,25 +19,6 @@ const createUserRoutine = async (req, res) => {
     }
 };
 
-const updateUserRoutine = async (req,res) => {
-    try {
-        const {rouid} = req.params;
-        const { rouname, description} = req.body;
-
-        const query = 'UPDATE "Routine" set rouname = $1, description = $2 WHERE rouid = $3 RETURNING *';
-        const values = [rouname, description, rouid];
-        const results = await pool.query(query, values);
-
-        if (results.rows.length === 0) {
-            return res.status(404).json({message: 'Routine not found'});
-        }
-        res.json(results.rows[0]);
-    } catch (error) {
-        console.error('Error updating routine:', error);
-        res.status(500).json({error: 'Failed to update routine'});
-    }
-};
-
 const deleteUserRoutine = async (req,res) => {
     try {
         const {rouid} = req.params;
@@ -74,25 +55,8 @@ const getUserRoutine = async (req,res) => {
     }
 };
 
-const getRoutineById = async (req,res) => {
-    try {
-        const { remid } = req.params;
-
-        const query = 'SELECT * FROM "Routine" where rouid = $1';
-        const values = [remid];
-        const results = await pool.query(query, values);
-
-        res.json(results.rows);
-    } catch (error) {
-        console.error('Error get routine:', error);
-        res.status(500).json({error: 'Failed to get routine'});
-    }
-};
-
 module.exports = {
     createUserRoutine,
-    updateUserRoutine,
     deleteUserRoutine,
-    getRoutineById,
     getUserRoutine
 };

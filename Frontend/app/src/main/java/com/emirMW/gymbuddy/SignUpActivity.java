@@ -66,7 +66,7 @@ public class SignUpActivity extends AppCompatActivity {
         String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
         if (userName.isEmpty() || userEmail.isEmpty() || userPassword.isEmpty()) {
-            Toast.makeText(mContext, "Field cannot be empty",
+            Toast.makeText(mContext, "Please fill all the fields",
                     Toast.LENGTH_SHORT).show();
             return;
         }
