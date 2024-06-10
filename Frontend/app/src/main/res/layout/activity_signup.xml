@@ -20,7 +20,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438"
         tools:ignore="MissingConstraints"
-        android:backgroundTint="#ffff">
+        android:backgroundTint="#ffff"
+        app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:id="@+id/register_form"

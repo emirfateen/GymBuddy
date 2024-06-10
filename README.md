@@ -32,6 +32,6 @@ GymBuddy is built using this following technologies:
     ```
     npm run start
     ```
+- On the Android application, don't forget to change the IP Address on the UtilsAPI 
 - Build and run the Android application
-
 
