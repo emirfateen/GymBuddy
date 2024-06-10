@@ -37,6 +37,7 @@ public class VariationDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_variation_detail);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Variation Detail");
 
         mContext = this;
@@ -70,7 +71,6 @@ public class VariationDetailActivity extends AppCompatActivity {
         repsNum = findViewById(R.id.repsNumber);
         deleteVar = findViewById(R.id.deleteVar);
         saveButton = findViewById(R.id.saveButton);
-        backButton = findViewById(R.id.backButton);
 
         SharedPreferences sharedPreferences = getSharedPreferences("Logged", Context.MODE_PRIVATE);
         String selectedVarId = sharedPreferences.getString("selectedVarId", "");
@@ -88,13 +88,6 @@ public class VariationDetailActivity extends AppCompatActivity {
             Intent intent = new Intent(mContext, VariationActivity.class);
             startActivity(intent);
         });
-
-        // Back to Variation Activity and Cancel Update
-        backButton.setOnClickListener(v->{
-            Intent intent = new Intent(mContext, VariationActivity.class);
-            startActivity(intent);
-        });
-
     }
 
     private void getVariationDetail(String selectedVarId) {

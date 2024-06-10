@@ -44,6 +44,7 @@ public class ReminderDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder_detail);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Reminder Detail");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -77,7 +78,6 @@ public class ReminderDetailActivity extends AppCompatActivity {
         setupSpinner();
 
         saveButton = findViewById(R.id.saveButton);
-        backButton = findViewById(R.id.backButton);
         deleteRem = findViewById(R.id.deleteRem);
         switchNotif = findViewById(R.id.switchNotif);
 
@@ -92,11 +92,6 @@ public class ReminderDetailActivity extends AppCompatActivity {
 
         saveButton.setOnClickListener(v -> {
             updateReminder(selectedRemId);
-            Intent intent = new Intent(mContext, ReminderActivity.class);
-            startActivity(intent);
-        });
-
-        backButton.setOnClickListener(v->{
             Intent intent = new Intent(mContext, ReminderActivity.class);
             startActivity(intent);
         });

@@ -154,26 +154,14 @@
         app:menu="@menu/bottom_nav_view" />
 
     <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#CD3939"
-        android:textColor="@color/black"
-        android:text="BACK"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="252dp"
         android:backgroundTint="@color/yellow"
-        android:textColor="@color/fairuz_blue"
         android:text="SAVE"
+        android:textColor="@color/fairuz_blue"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
